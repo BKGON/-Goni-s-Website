@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>곤이의 블로그</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Nanum Pen Script", serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .hero {
+            background-image: url('up_backgraund.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            width: 100%;
+            padding-top: 40%;
+            /* 4:3 비율 */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            text-align: center;
+            /* h1은 가운데 정렬 */
+            font-size: 95px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* 글씨 그림자 */
+            -webkit-text-stroke: 2px black;
+            /* 글씨 테두리 */
+            color: white;
+            /* 텍스트 색상 */
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            /* 소제목 크기 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* 글씨 그림자 */
+            -webkit-text-stroke: 1px black;
+            /* 글씨 테두리 */
+            margin-top: 70px;
+            /* 간격을 늘림 */
+            text-align: right;
+            /* 우측 정렬 */
+            align-self: flex-end;
+            /* 부모의 flexbox 컨텍스트에서 우측으로 이동 */
+            padding-right: 40px;
+            /* 우측에 약간의 공간 */
+        }
+
+        .banner-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .banner {
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            padding-top: 75%;
+            /* 4:3 비율을 유지하기 위해 */
+            position: relative;
+        }
+
+        .banner-caption {
+            position: absolute;
+            bottom: -40px;
+            /* 배너 아래로 텍스트 위치 */
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 35px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* 글씨 그림자 */
+            -webkit-text-stroke: 1px black;
+            /* 글씨 테두리 */
+            text-align: center;
+        }
+
+        .new-banner {
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            padding-top: 70%;
+            /* 4:3 비율을 유지하기 위해 */
+            position: relative;
+        }
+
+        .new-banner a {
+            color: white;
+            font-size: 50px;
+            text-decoration: none;
+            padding: 10px 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* 글씨 그림자 */
+            -webkit-text-stroke: 2px black;
+            /* 글씨 테두리 */
+        }
+
+        hr {
+            border: 1px solid black;
+            width: 100%;
+            margin: 40px 0;
+        }
+
+        .instagram {
+            text-align: center;
+            font-size: 2em;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <h1><span style="color: NavajoWhite; font-size: 120px"> 곤이 </span>의 따뜻한
+            <span style="color: NavajoWhite; font-size: 120px">하루 </span> and 커피한잔
+        </h1>
+        <h2><span style="color: LavenderBlush;">육아와 취미생활을 하는 INTJ</span></h2>
+    </header>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="banner-container">
+                    <div class="banner" style="background-image: url('banner1.jpg');"></div>
+                    <div class="banner-caption">육아스토리</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="banner-container">
+                    <div class="banner" style="background-image: url('banner2.jpg');"></div>
+                    <div class="banner-caption">DIE 말고 DIY</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="banner-container">
+                    <div class="banner" style="background-image: url('banner3.jpg');"></div>
+                    <div class="banner-caption">건강과 운동</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="new-banner" style="background-image: url('low-banner.jpg');">
+                    <a href="#">추가 배너</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12 instagram">
+                bkgon2@instagram
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
