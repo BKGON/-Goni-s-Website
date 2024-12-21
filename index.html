@@ -95,6 +95,14 @@
             font-size: 2em;
             color: black;
         }
+        /* 마우스 커서 커지는 효과 */
+        .banner-container:hover {
+            cursor: pointer;
+        }
+        .banner-container:hover .banner, .new-banner:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
     </style>
 </head>
 <body>
@@ -148,5 +156,4 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
