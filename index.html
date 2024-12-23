@@ -32,7 +32,7 @@
         /* 배너의 주요 제목 */
         .hero h1 {
             text-align: center; /* 텍스트 가운데 정렬 */
-            font-size: 2em; /* 기본 글씨 크기 (모바일 화면) */
+            font-size: 4em; /* 기본 글씨 크기 (모바일 화면) */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
             color: white; /* 텍스트 색상 */
             max-width: 90%; /* 텍스트 최대 너비 */
@@ -40,7 +40,7 @@
 
         /* 배너의 소제목 1 */
         .hero h2 {
-            font-size: 1.5em; /* 기본 글씨 크기 (모바일 화면) */
+            font-size: 3em; /* 기본 글씨 크기 (모바일 화면) */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
             margin-top: 10px; /* 위쪽 마진 */
             text-align: center; /* 텍스트 가운데 정렬 */
@@ -49,7 +49,7 @@
 
         /* 배너의 소제목 2 */
         .hero h3 {
-            font-size: 1.2em; /* 기본 글씨 크기 (모바일 화면) */
+            font-size: 2.4em; /* 기본 글씨 크기 (모바일 화면) */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
             margin-top: 10px; /* 위쪽 마진 */
             text-align: right; /* 텍스트 오른쪽 정렬 */
@@ -65,14 +65,14 @@
             display: flex;
             overflow-x: scroll; /* 가로 스크롤 */
             gap: 20px; /* 배너 간 간격 추가 */
-            height: 300px; /* 배너의 할당 공간 세로 크기 늘림 */
+            height: 250px; /* 배너의 할당 공간 세로 크기 늘림 */
         }
 
         /* 개별 배너 스타일 */
         .banner {
             background-size: cover; /* 배경 이미지 크기 조절 */
             background-position: center; /* 배경 이미지 위치 */
-            width: 220px; /* 배너 가로 크기 (모바일 화면) */
+            width: 200px; /* 배너 가로 크기 (모바일 화면) */
             height: 100%; /* 배너 세로 크기 할당 공간과 동일하게 설정 */
             position: relative;
             flex-shrink: 0; /* 배너가 줄어들지 않도록 설정 */
@@ -137,24 +137,25 @@
         @media (min-width: 768px) {
             .hero {
                 height: 50vh; /* 배너 높이 줄이기 */
+                max-width: 80vw; /* 최대 너비 줄이기 */
             }
             .hero h1 {
-                font-size: 4em; /* 컴퓨터 화면에서의 글씨 크기 */
+                font-size: 8em; /* 컴퓨터 화면에서의 글씨 크기 */
             }
             .hero h2 {
-                font-size: 3em; /* 컴퓨터 화면에서의 글씨 크기 */
+                font-size: 6em; /* 컴퓨터 화면에서의 글씨 크기 */
             }
             .hero h3 {
-                font-size: 2.5em; /* 컴퓨터 화면에서의 글씨 크기 */
+                font-size: 4.8em; /* 컴퓨터 화면에서의 글씨 크기 */
                 text-align: right; /* 텍스트 오른쪽 정렬 */
                 align-self: flex-end; /* 부모의 flexbox 컨텍스트에서 우측으로 이동 */
                 padding-right: 20px; /* 우측 패딩 추가 */
             }
             .banner-container {
-                height: 400px; /* 배너의 할당 공간 세로 크기 늘림 */
+                height: 350px; /* 배너의 할당 공간 세로 크기 줄이기 */
             }
             .banner {
-                width: 300px; /* 배너 가로 크기 (컴퓨터 화면) */
+                width: 250px; /* 배너 가로 크기 (컴퓨터 화면) */
                 height: 100%; /* 배너 세로 크기 할당 공간과 동일하게 설정 */
             }
         }
@@ -208,6 +209,5 @@
 
     <!-- 스크립트 파일 -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min[_{{{CITATION{{{_1{]
+        (https://github.com/rkustas/techarticles/tree/598d65a5c026d9ecd3c7f0258f4a44f93e7029d0/client%2Fpages%2F_document.js)
