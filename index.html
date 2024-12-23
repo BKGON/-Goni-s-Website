@@ -42,7 +42,7 @@
             font-size: 1.5em; /* 기본 글씨 크기 (모바일 화면) */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
             margin-top: 10px; /* 위쪽 마진 */
-            text-align: right; /* 텍스트 오른쪽 정렬 */
+            text-align: center; /* 텍스트 가운데 정렬 */
         }
 
         /* 배너의 소제목 2 */
@@ -50,7 +50,9 @@
             font-size: 1.2em; /* 기본 글씨 크기 (모바일 화면) */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
             margin-top: 10px; /* 위쪽 마진 */
-            text-align: right; /* 텍스트 가운데 정렬 */
+            text-align: right; /* 텍스트 오른쪽 정렬 */
+            align-self: flex-end; /* 부모의 flexbox 컨텍스트에서 우측으로 이동 */
+            padding-right: 20px; /* 우측 패딩 추가 */
         }
 
         /* 배너 컨테이너 스타일 */
@@ -67,7 +69,7 @@
         .banner {
             background-size: cover; /* 배경 이미지 크기 조절 */
             background-position: center; /* 배경 이미지 위치 */
-            width: 220px; /* 배너 가로 크기 */
+            width: 220px; /* 배너 가로 크기 (모바일 화면) */
             height: 100%; /* 배너 세로 크기 할당 공간과 동일하게 설정 */
             position: relative;
             flex-shrink: 0; /* 배너가 줄어들지 않도록 설정 */
@@ -134,13 +136,20 @@
                 padding-top: 20%; /* 배너 높이 줄이기 */
             }
             .hero h1 {
-                font-size: 5em; /* 컴퓨터 화면에서의 글씨 크기 */
+                font-size: 4em; /* 컴퓨터 화면에서의 글씨 크기 */
             }
             .hero h2 {
                 font-size: 3em; /* 컴퓨터 화면에서의 글씨 크기 */
             }
             .hero h3 {
                 font-size: 2.5em; /* 컴퓨터 화면에서의 글씨 크기 */
+                text-align: right; /* 텍스트 오른쪽 정렬 */
+                align-self: flex-end; /* 부모의 flexbox 컨텍스트에서 우측으로 이동 */
+                padding-right: 20px; /* 우측 패딩 추가 */
+            }
+            .banner {
+                width: 300px; /* 배너 가로 크기 (컴퓨터 화면) */
+                height: 250px; /* 배너 세로 크기 (컴퓨터 화면) */
             }
         }
     </style>
