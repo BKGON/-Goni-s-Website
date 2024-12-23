@@ -26,41 +26,41 @@
             align-items: center;
         }
 
-        .hero h1, .hero h2, .hero h3 {
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 글씨 그림자 */
-            color: white; /* 텍스트 색상 */
-        }
-
         .hero h1 {
             text-align: center;
-            font-size: 2em;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: white;
         }
 
         .hero h2 {
             font-size: 2em;
-            text-align: center;
-            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 10px;
+            text-align: right;
         }
 
         .hero h3 {
             font-size: 1.5em;
-            margin-top: 20px;
-            text-align: right;
-            align-self: flex-end;
-            padding-right: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 10px;
+            text-align: center;
         }
 
         .banner-container {
             position: relative;
             width: 100%;
+            display: flex;
+            overflow-x: scroll; /* 가로 스크롤 */
         }
 
         .banner {
             background-size: cover;
             background-position: center;
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 비율 */
+            width: 300px;
+            height: 200px;
             position: relative;
+            margin-right: 20px;
         }
 
         .banner-caption {
@@ -69,8 +69,8 @@
             left: 50%;
             transform: translateX(-50%);
             color: white;
-            font-size: 1.5em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 글씨 그림자 */
+            font-size: 1.2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             text-align: center;
             background-color: rgba(0, 0, 0, 0.5);
             width: 100%;
@@ -84,17 +84,6 @@
             position: absolute;
             top: 0;
             left: 0;
-        }
-
-        .scrolling-wrapper {
-            display: flex;
-            overflow-x: auto;
-            padding: 10px;
-        }
-
-        .scrolling-wrapper .col-md-4 {
-            flex: 0 0 auto;
-            width: 33.333%;
         }
 
         hr {
@@ -114,8 +103,7 @@
             cursor: pointer;
         }
 
-        .banner-container:hover .banner,
-        .new-banner:hover {
+        .banner-container:hover .banner {
             transform: scale(1.05);
             transition: transform 0.3s ease;
         }
@@ -128,38 +116,23 @@
         <h2>그리고 커피한잔</h2>
         <h3>육아와 취미생활을 하는 INTJ</h3>
     </header>
-    <div class="container mt-5 scrolling-wrapper">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="banner-container">
-                    <div class="banner" style="background-image: url('banner1.jpg');">
-                        <a href="parenting.html" target="_blank"></a>
-                    </div>
-                    <div class="banner-caption">육아스토리</div>
-                </div>
+    <div class="container mt-5">
+        <div class="banner-container">
+            <div class="banner" style="background-image: url('banner1.jpg');">
+                <a href="parenting.html" target="_blank"></a>
+                <div class="banner-caption">육아스토리</div>
             </div>
-            <div class="col-md-4">
-                <div class="banner-container">
-                    <div class="banner" style="background-image: url('banner2.jpg');">
-                        <a href="DIY.html" target="_blank"></a>
-                    </div>
-                    <div class="banner-caption">DIE 말고 DIY</div>
-                </div>
+            <div class="banner" style="background-image: url('banner2.jpg');">
+                <a href="DIY.html" target="_blank"></a>
+                <div class="banner-caption">DIE 말고 DIY</div>
             </div>
-            <div class="col-md-4">
-                <div class="banner-container">
-                    <div class="banner" style="background-image: url('banner3.jpg');">
-                        <a href="helth.html" target="_blank"></a>
-                    </div>
-                    <div class="banner-caption">건강과 운동</div>
-                </div>
+            <div class="banner" style="background-image: url('banner3.jpg');">
+                <a href="helth.html" target="_blank"></a>
+                <div class="banner-caption">건강과 운동</div>
             </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-12">
-                <div class="new-banner" style="background-image: url('low-banner.jpg');">
-                    <a href="link_to_your_page4" target="_blank">추가 배너</a>
-                </div>
+            <div class="banner" style="background-image: url('low-banner.jpg');">
+                <a href="link_to_your_page4" target="_blank"></a>
+                <div class="banner-caption">추가 배너</div>
             </div>
         </div>
         <hr>
@@ -171,6 +144,6 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
