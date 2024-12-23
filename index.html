@@ -16,19 +16,17 @@
         /* 상단 배너 스타일 */
         .hero {
             background-image: url('up_backgraund.jpg'); /* 배경 이미지 설정 */
-            background-size: contain; /* 이미지 크기 조절 */
+            background-size: cover; /* 이미지 크기 조절 */
             background-position: center; /* 배경 이미지 위치 */
             background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
             color: white; /* 텍스트 색상 */
             width: 100%; /* 배너 너비 */
-            padding-top: 70%; /* 배너 높이 (모바일 화면) */
+            height: 70vh; /* 배너 높이 */
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            max-width: 100%; /* 최대 너비 설정 */
-            max-height: 100vh; /* 최대 높이 설정 */
         }
 
         /* 배너의 주요 제목 */
@@ -37,7 +35,7 @@
             font-size: 2em; /* 기본 글씨 크기 (모바일 화면) */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
             color: white; /* 텍스트 색상 */
-            max-width: 100%; /* 텍스트 최대 너비 */
+            max-width: 90%; /* 텍스트 최대 너비 */
         }
 
         /* 배너의 소제목 1 */
@@ -46,7 +44,7 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
             margin-top: 10px; /* 위쪽 마진 */
             text-align: center; /* 텍스트 가운데 정렬 */
-            max-width: 100%; /* 텍스트 최대 너비 */
+            max-width: 90%; /* 텍스트 최대 너비 */
         }
 
         /* 배너의 소제목 2 */
@@ -57,7 +55,7 @@
             text-align: right; /* 텍스트 오른쪽 정렬 */
             align-self: flex-end; /* 부모의 flexbox 컨텍스트에서 우측으로 이동 */
             padding-right: 20px; /* 우측 패딩 추가 */
-            max-width: 100%; /* 텍스트 최대 너비 */
+            max-width: 90%; /* 텍스트 최대 너비 */
         }
 
         /* 배너 컨테이너 스타일 */
@@ -138,8 +136,7 @@
         /* 큰 화면 (컴퓨터)에서 배너 높이를 줄이기 위한 미디어 쿼리 */
         @media (min-width: 768px) {
             .hero {
-                padding-top: 30%; /* 배너 높이 줄이기 */
-                max-height: 70vh; /* 최대 높이 설정 */
+                height: 50vh; /* 배너 높이 줄이기 */
             }
             .hero h1 {
                 font-size: 4em; /* 컴퓨터 화면에서의 글씨 크기 */
@@ -214,4 +211,3 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html>
