@@ -20,7 +20,7 @@
             background-position: center; /* 배경 이미지 위치 */
             color: white; /* 텍스트 색상 */
             width: 100%; /* 배너 너비 */
-            padding-top: 250PX; /* 배너 높이 */
+            padding-top: 40%; /* 배너 높이 */
             position: relative;
             display: flex;
             flex-direction: column;
@@ -59,21 +59,22 @@
             display: flex;
             overflow-x: scroll; /* 가로 스크롤 */
             gap: 20px; /* 배너 간 간격 추가 */
+            height: 200px; /* 배너의 할당 공간 세로 크기 늘림 */
         }
 
         /* 개별 배너 스타일 */
         .banner {
             background-size: cover; /* 배경 이미지 크기 조절 */
             background-position: center; /* 배경 이미지 위치 */
-            width: 350px; /* 배너 가로 크기 */
-            height: 450px; /* 배너 세로 크기 */
+            width: 400px; /* 배너 가로 크기 */
+            height: 100%; /* 배너 세로 크기 할당 공간과 동일하게 설정 */
             position: relative;
             flex-shrink: 0; /* 배너가 줄어들지 않도록 설정 */
-            transition: transform 0.3s ease; /* 호버 효과를 위한 변환 */
+            transition: transform 0.3s ease; /* 배너 확대 효과 */
         }
 
-        /* 각 배너별 호버 효과 */
-        .banner-container .banner:hover {
+        /* 배너 마우스 호버 효과 */
+        .banner:hover {
             transform: scale(1.05);
         }
 
@@ -126,16 +127,6 @@
             margin: 20px 0;
         }
 
-        @media (max-width: 768px) {
-            .banner {
-                width: 300px; /* 모바일에서 배너 너비 조정 */
-                height: 100px; /* 모바일에서 배너 높이 조정 */
-            }
-
-            .banner-container {
-                gap: 10px; /* 모바일에서 배너 간 간격 조정 */
-            }
-        }
     </style>
 </head>
 
