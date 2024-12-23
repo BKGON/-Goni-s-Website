@@ -16,11 +16,12 @@
         /* 상단 배너 스타일 */
         .hero {
             background-image: url('up_backgraund.jpg'); /* 배경 이미지 설정 */
-            background-size: cover; /* 이미지 크기 조절 */
+            background-size: contain; /* 이미지 크기 조절 */
             background-position: center; /* 배경 이미지 위치 */
+            background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
             color: white; /* 텍스트 색상 */
             width: 100%; /* 배너 너비 */
-            padding-top: 50%; /* 배너 높이 (모바일 화면) */
+            padding-top: 40%; /* 배너 높이 (모바일 화면) */
             position: relative;
             display: flex;
             flex-direction: column;
@@ -66,7 +67,7 @@
         .banner {
             background-size: cover; /* 배경 이미지 크기 조절 */
             background-position: center; /* 배경 이미지 위치 */
-            width: 250px; /* 배너 가로 크기 */
+            width: 220px; /* 배너 가로 크기 */
             height: 100%; /* 배너 세로 크기 할당 공간과 동일하게 설정 */
             position: relative;
             flex-shrink: 0; /* 배너가 줄어들지 않도록 설정 */
