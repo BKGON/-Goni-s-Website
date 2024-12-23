@@ -62,7 +62,7 @@
             display: flex;
             overflow-x: scroll; /* 가로 스크롤 */
             gap: 20px; /* 배너 간 간격 추가 */
-            height: 200px; /* 배너의 할당 공간 세로 크기 늘림 */
+            height: 300px; /* 배너의 할당 공간 세로 크기 늘림 */
         }
 
         /* 개별 배너 스타일 */
@@ -147,9 +147,12 @@
                 align-self: flex-end; /* 부모의 flexbox 컨텍스트에서 우측으로 이동 */
                 padding-right: 20px; /* 우측 패딩 추가 */
             }
+            .banner-container {
+                height: 400px; /* 배너의 할당 공간 세로 크기 늘림 */
+            }
             .banner {
                 width: 300px; /* 배너 가로 크기 (컴퓨터 화면) */
-                height: 250px; /* 배너 세로 크기 (컴퓨터 화면) */
+                height: 100%; /* 배너 세로 크기 할당 공간과 동일하게 설정 */
             }
         }
     </style>
