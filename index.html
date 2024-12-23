@@ -58,16 +58,17 @@
             width: 100%;
             display: flex;
             overflow-x: scroll; /* 가로 스크롤 */
+            gap: 20px; /* 배너 간 간격 추가 */
         }
 
         /* 개별 배너 스타일 */
         .banner {
             background-size: cover; /* 배경 이미지 크기 조절 */
             background-position: center; /* 배경 이미지 위치 */
-            width: 500px; /* 배너 가로 크기 */
-            height: 250px; /* 배너 세로 크기 */
+            width: calc(33.33% - 13.33px); /* 배너 가로 크기 */
+            height: 150px; /* 배너 세로 크기 */
             position: relative;
-            margin-right: 20px;
+            flex-shrink: 0; /* 배너가 줄어들지 않도록 설정 */
         }
 
         /* 배너 캡션 스타일 */
@@ -149,11 +150,11 @@
             </div>
             <div class="banner" style="background-image: url('banner2.jpg');">
                 <a href="DIY.html" target="_blank"></a>
-                <div class="banner-caption">DIE 말고<br> DIY</div>
+                <div class="banner-caption">DIE 말고 DIY</div>
             </div>
             <div class="banner" style="background-image: url('banner3.jpg');">
                 <a href="helth.html" target="_blank"></a>
-                <div class="banner-caption">건강<br>&운동</div>
+                <div class="banner-caption">건강 & 운동</div>
             </div>
         </div>
 
