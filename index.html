@@ -20,8 +20,9 @@
             background-position: center; /* 배경 이미지 위치 */
             background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
             color: white; /* 텍스트 색상 */
-            width: 100%; /* 배너 너비 */
+            width: calc(100% - 20px); /* 배너 너비 */
             height: 70vh; /* 배너 높이 */
+            margin-left: 10px; /* 왼쪽에 여유 공간 추가 */
             position: relative;
             display: flex;
             flex-direction: column;
@@ -32,7 +33,7 @@
         /* 배너의 주요 제목 */
         .hero h1 {
             text-align: center; /* 텍스트 가운데 정렬 */
-            font-size: 3em; /* 기본 글씨 크기 (모바일 화면) */
+            font-size: 4em; /* 기본 글씨 크기 (모바일 화면) */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
             color: white; /* 텍스트 색상 */
             max-width: 90%; /* 텍스트 최대 너비 */
@@ -40,7 +41,7 @@
 
         /* 배너의 소제목 1 */
         .hero h2 {
-            font-size: 2.5em; /* 기본 글씨 크기 (모바일 화면) */
+            font-size: 3em; /* 기본 글씨 크기 (모바일 화면) */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
             margin-top: 10px; /* 위쪽 마진 */
             text-align: center; /* 텍스트 가운데 정렬 */
@@ -49,7 +50,7 @@
 
         /* 배너의 소제목 2 */
         .hero h3 {
-            font-size: 1.5em; /* 기본 글씨 크기 (모바일 화면) */
+            font-size: 2.4em; /* 기본 글씨 크기 (모바일 화면) */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
             margin-top: 10px; /* 위쪽 마진 */
             text-align: right; /* 텍스트 오른쪽 정렬 */
@@ -138,6 +139,7 @@
             .hero {
                 height: 50vh; /* 배너 높이 줄이기 */
                 max-width: 80vw; /* 최대 너비 줄이기 */
+                margin-left: 20vw; /* 컴퓨터 화면에서 왼쪽 마진 추가 */
             }
             .hero h1 {
                 font-size: 8em; /* 컴퓨터 화면에서의 글씨 크기 */
@@ -166,7 +168,7 @@
     <!-- 상단 배너 -->
     <header class="hero">
         <h1>곤이의 따뜻한 하루</h1>
-        <h2>그리고 커피한잔</h2>
+        <h2>그리고 커피한잔</h3>
         <h3>육아와 취미생활을 하는 INTJ</h3>
     </header>
 
