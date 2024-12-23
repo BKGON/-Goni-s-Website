@@ -6,19 +6,21 @@
     <title>곤이의 블로그</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* 폰트 설정 */
         body {
             font-family: "Nanum Pen Script", serif;
             font-weight: 300;
             font-style: normal;
         }
 
+        /* 상단 배너 스타일 */
         .hero {
-            background-image: url('up_backgraund.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            width: 100%;
-            padding-top: 40%;
+            background-image: url('up_backgraund.jpg'); /* 배경 이미지 설정 */
+            background-size: cover; /* 이미지 크기 조절 */
+            background-position: center; /* 배경 이미지 위치 */
+            color: white; /* 텍스트 색상 */
+            width: 100%; /* 배너 너비 */
+            padding-top: 40%; /* 배너 높이 */
             position: relative;
             display: flex;
             flex-direction: column;
@@ -26,27 +28,31 @@
             align-items: center;
         }
 
+        /* 배너의 주요 제목 */
         .hero h1 {
-            text-align: center;
-            font-size: 3em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            color: white;
+            text-align: center; /* 텍스트 가운데 정렬 */
+            font-size: 3em; /* 글씨 크기 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
+            color: white; /* 텍스트 색상 */
         }
 
+        /* 배너의 소제목 1 */
         .hero h2 {
-            font-size: 2em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-top: 10px;
-            text-align: right;
+            font-size: 2em; /* 글씨 크기 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
+            margin-top: 10px; /* 위쪽 마진 */
+            text-align: right; /* 텍스트 오른쪽 정렬 */
         }
 
+        /* 배너의 소제목 2 */
         .hero h3 {
-            font-size: 1.5em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-top: 10px;
-            text-align: center;
+            font-size: 1.5em; /* 글씨 크기 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
+            margin-top: 10px; /* 위쪽 마진 */
+            text-align: center; /* 텍스트 가운데 정렬 */
         }
 
+        /* 배너 컨테이너 스타일 */
         .banner-container {
             position: relative;
             width: 100%;
@@ -54,29 +60,32 @@
             overflow-x: scroll; /* 가로 스크롤 */
         }
 
+        /* 개별 배너 스타일 */
         .banner {
-            background-size: cover;
-            background-position: center;
-            width: 300px;
-            height: 200px;
+            background-size: cover; /* 배경 이미지 크기 조절 */
+            background-position: center; /* 배경 이미지 위치 */
+            width: 400px; /* 배너 가로 크기 */
+            height: 150px; /* 배너 세로 크기 */
             position: relative;
             margin-right: 20px;
         }
 
+        /* 배너 캡션 스타일 */
         .banner-caption {
             position: absolute;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            color: white;
-            font-size: 1.2em;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.5);
+            color: white; /* 텍스트 색상 */
+            font-size: 1.5em; /* 글씨 크기 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트 그림자 효과 */
+            text-align: center; /* 텍스트 가운데 정렬 */
+            background-color: rgba(0, 0, 0, 0.5); /* 배경색 반투명 설정 */
             width: 100%;
             padding: 5px 0;
         }
 
+        /* 배너 클릭 영역 */
         .banner a {
             display: block;
             width: 100%;
@@ -86,23 +95,36 @@
             left: 0;
         }
 
+        /* 가로줄 스타일 */
         hr {
             border: 1px solid black;
             width: 100%;
             margin: 40px 0;
         }
 
+        /* 인스타그램 정보 스타일 */
         .instagram {
             text-align: center;
-            font-size: 2em;
-            color: black;
+            font-size: 2em; /* 글씨 크기 */
+            color: black; /* 텍스트 색상 */
         }
 
-        /* 마우스 커서 커지는 효과 */
+        /* 최근 게시물 스타일 */
+        .recent-post {
+            text-align: center;
+            font-size: 1.5em; /* 글씨 크기 */
+            background-color: #f8f9fa; /* 배경색 설정 */
+            padding: 20px;
+            border: 2px solid #ddd; /* 테두리 설정 */
+            margin: 20px 0;
+        }
+
+        /* 마우스 커서 효과 */
         .banner-container:hover {
             cursor: pointer;
         }
 
+        /* 배너 확대 효과 */
         .banner-container:hover .banner {
             transform: scale(1.05);
             transition: transform 0.3s ease;
@@ -111,11 +133,14 @@
 </head>
 
 <body>
+    <!-- 상단 배너 -->
     <header class="hero">
         <h1>곤이의 따뜻한 하루</h1>
         <h2>그리고 커피한잔</h2>
         <h3>육아와 취미생활을 하는 INTJ</h3>
     </header>
+
+    <!-- 컨텐츠 영역 -->
     <div class="container mt-5">
         <div class="banner-container">
             <div class="banner" style="background-image: url('banner1.jpg');">
@@ -130,11 +155,20 @@
                 <a href="helth.html" target="_blank"></a>
                 <div class="banner-caption">건강과 운동</div>
             </div>
-            <div class="banner" style="background-image: url('low-banner.jpg');">
-                <a href="link_to_your_page4" target="_blank"></a>
-                <div class="banner-caption">추가 배너</div>
+        </div>
+
+        <!-- 최근 게시물 -->
+        <hr>
+        <div class="row">
+            <div class="col-12 recent-post">
+                <h3>최신 게시물</h3>
+                <p>제목 1</p>
+                <p>제목 2</p>
+                <p>제목 3</p>
             </div>
         </div>
+
+        <!-- 인스타그램 정보 -->
         <hr>
         <div class="row">
             <div class="col-12 instagram">
@@ -142,6 +176,8 @@
             </div>
         </div>
     </div>
+
+    <!-- 스크립트 파일 -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
