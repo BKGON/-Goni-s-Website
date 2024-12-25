@@ -14,12 +14,12 @@
 
         .header {
             display: flex;
-            align-items: center;
+            align-items: flex-end; /* 각 항목을 하단 정렬 */
             padding: 20px;
         }
 
         .header img {
-            width: 100px;
+            width: 150px; /* "육아스토리" 이미지 크기 증가 */
             height: auto;
             transition: transform 0.2s; /* 마우스 오버 효과 추가 */
         }
@@ -29,9 +29,11 @@
         }
 
         .header h1 {
-            font-size: 3em;
-            margin-left: 20px;
+            font-size: 1.5em; /* "육아스토리" 텍스트 크기 조정 */
             color: #333;
+            margin-bottom: 10px; /* 텍스트 하단 여백 */
+            text-align: center;
+            margin-left: 10px;
         }
 
         .nav-item {
@@ -137,8 +139,12 @@
 </head>
 <body>
     <header class="header">
-        <img src="banner1.jpg" alt="육아스토리 배너 이미지"> <!-- 배너 이미지 경로 -->
-        <h1>육아스토리</h1>
+        <div class="nav-item">
+            <a href="index.html">
+                <img src="banner1.jpg" alt="육아스토리 배너 이미지">
+                <p>육아스토리</p>
+            </a>
+        </div>
         <div class="nav-item">
             <a href="home.html">
                 <img src="home.jpg" alt="홈 배너 이미지">
