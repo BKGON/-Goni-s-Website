@@ -21,11 +21,37 @@
         .header img {
             width: 100px;
             height: auto;
+            transition: transform 0.2s; /* 마우스 오버 효과 추가 */
+        }
+
+        .header img:hover {
+            transform: scale(1.1); /* 마우스 오버 시 배너 확대 효과 */
         }
 
         .header h1 {
             font-size: 3em;
             margin-left: 20px;
+            color: #333;
+        }
+
+        .nav-item {
+            text-align: center;
+            margin-left: 20px;
+        }
+
+        .nav-item img {
+            width: 80px;
+            height: 80px;
+            transition: transform 0.2s; /* 마우스 오버 효과 추가 */
+        }
+
+        .nav-item img:hover {
+            transform: scale(1.1); /* 마우스 오버 시 배너 확대 효과 */
+        }
+
+        .nav-item p {
+            margin-top: 10px;
+            font-size: 1em;
             color: #333;
         }
 
@@ -113,6 +139,24 @@
     <header class="header">
         <img src="banner1.jpg" alt="육아스토리 배너 이미지"> <!-- 배너 이미지 경로 -->
         <h1>육아스토리</h1>
+        <div class="nav-item">
+            <a href="home.html">
+                <img src="home.jpg" alt="홈 배너 이미지">
+                <p>홈</p>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="diy.html">
+                <img src="diy.jpg" alt="DIY 배너 이미지">
+                <p>DIY</p>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="health.html">
+                <img src="health.jpg" alt="건강과 운동 배너 이미지">
+                <p>건강과 운동</p>
+            </a>
+        </div>
     </header>
     <section class="subheader">
         <h2>육아에 정답은 없다 끊임없는 노력만 있을 뿐</h2>
