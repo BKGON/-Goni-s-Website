@@ -60,6 +60,13 @@
         .article-list li {
             border-bottom: 1px solid #ddd;
             padding: 10px 0;
+            display: flex;
+        }
+
+        .article-list img {
+            width: 400px;
+            height: 300px;
+            margin-right: 20px;
         }
 
         .article-list button {
@@ -179,7 +186,7 @@
         function addPostToList(title, content, imageUrl) {
             var postList = document.getElementById('postList');
             var li = document.createElement('li');
-            li.innerHTML = '<h4>' + title + '</h4><img src="' + imageUrl + '" alt="' + title + '"><p>' + content + '</p>';
+            li.innerHTML = '<img src="' + imageUrl + '" alt="' + title + '"><div><h4>' + title + '</h4><p>' + content + '</p></div>';
             postList.appendChild(li);
         }
 
@@ -195,5 +202,4 @@
         window.onload = loadPosts;
     </script>
 </body>
-
 </html>
