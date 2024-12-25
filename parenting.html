@@ -61,6 +61,7 @@
             border-bottom: 1px solid #ddd;
             padding: 10px 0;
             display: flex;
+            align-items: center;
         }
 
         .article-list img {
@@ -69,15 +70,24 @@
             margin-right: 20px;
         }
 
+        .article-list .content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .article-list .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
         .article-list button {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            font-size: 1.2em;
             background-color: #007bff;
             color: white;
             border: none;
             cursor: pointer;
+            padding: 5px 10px;
         }
 
         .modal-body img {
@@ -133,6 +143,38 @@
         </div>
     </div>
 
+    <!-- 수정 모달 창 -->
+    <div class="modal fade" id="editPostModal" tabindex="-1" aria-labelledby="editPostModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editPostModalLabel">글 수정</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <div class="form-group">
+                            <label for="editTitle">제목</label>
+                            <input type="text" class="form-control" id="editTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editImage">사진</label>
+                            <input type="file" class="form-control-file" id="editImage" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <label for="editContent">글 내용</label>
+                            <textarea class="form-control" id="editContent" rows="5" required></textarea>
+                        </div>
+                        <input type="hidden" id="editIndex">
+                        <button type="submit" class="btn btn-primary">수정</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -182,24 +224,72 @@
             reader.readAsDataURL(image);
         });
 
-        // 글 목록에 글 추가 함수
-        function addPostToList(title, content, imageUrl) {
-            var postList = document.getElementById('postList');
-            var li = document.createElement('li');
-            li.innerHTML = '<img src="' + imageUrl + '" alt="' + title + '"><div><h4>' + title + '</h4><p>' + content + '</p></div>';
-            postList.appendChild(li);
-        }
+        // 글 수정 폼 제출 이벤트 처리
+        document.getElementById('editForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // 폼 제출 기본 동작 중지
 
-        // 로컬 스토리지에서 글 불러오기
-        function loadPosts() {
+            // 입력된 값 가져오기
+            var index = document.getElementById('editIndex').value;
+            var title = document.getElementById('editTitle').value;
+            var content = document.getElementById('editContent').value;
+            var image = document.getElementById('editImage').files[0];
             var posts = JSON.parse(localStorage.getItem('posts')) || [];
-            posts.forEach(function(post) {
-                addPostToList(post.title, post.content, post.imageUrl);
-            });
-        }
 
-        // 페이지 로드 시 글 불러오기
-        window.onload = loadPosts;
-    </script>
+            if (image) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    var imageUrl = e.target.result;
+                    posts[index] = { title: title, content: content, imageUrl: imageUrl };
+                    localStorage.setItem('posts', JSON.stringify(posts));
+                    loadPosts();
+                    $('#editPostModal').modal('hide');
+                };
+                reader.readAsDataURL(image);
+            else {
+    posts[index] = { title: title, content: content, imageUrl: posts[index].imageUrl };
+    localStorage.setItem('posts', JSON.stringify(posts));
+    loadPosts();
+    $('#editPostModal').modal('hide');
+}
+
+// 글 목록에 글 추가 함수
+function addPostToList(title, content, imageUrl) {
+    var postList = document.getElementById('postList');
+    var li = document.createElement('li');
+    li.innerHTML = '<img src="' + imageUrl + '" alt="' + title + '"><div class="content"><h4>' + title + '</h4><p>' + content + '</p><div class="buttons"><button onclick="editPost(' + postList.children.length + ')">수정</button><button onclick="deletePost(' + postList.children.length + ')">삭제</button></div></div>';
+    postList.appendChild(li);
+}
+
+// 글 수정 함수
+function editPost(index) {
+    var posts = JSON.parse(localStorage.getItem('posts')) || [];
+    var post = posts[index];
+    document.getElementById('editTitle').value = post.title;
+    document.getElementById('editContent').value = post.content;
+    document.getElementById('editIndex').value = index;
+    $('#editPostModal').modal('show');
+}
+
+// 글 삭제 함수
+function deletePost(index) {
+    var posts = JSON.parse(localStorage.getItem('posts')) || [];
+    posts.splice(index, 1);
+    localStorage.setItem('posts', JSON.stringify(posts));
+    loadPosts();
+}
+
+// 로컬 스토리지에서 글 불러오기
+function loadPosts() {
+    var postList = document.getElementById('postList');
+    postList.innerHTML = '';
+    var posts = JSON.parse(localStorage.getItem('posts')) || [];
+    posts.forEach(function(post, index) {
+        addPostToList(post.title, post.content, post.imageUrl, index);
+    });
+}
+
+// 페이지 로드 시 글 불러오기
+window.onload = loadPosts;
+</script>
 </body>
 </html>
