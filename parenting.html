@@ -68,6 +68,7 @@
             width: 400px;
             height: 300px;
             margin-right: 20px;
+            object-fit: cover; /* 비율 유지하며 크기 조정 */
         }
 
         .article-list .content {
@@ -245,7 +246,7 @@
                     $('#editPostModal').modal('hide');
                 };
                 reader.readAsDataURL(image);
-            else {
+            } else {
     posts[index] = { title: title, content: content, imageUrl: posts[index].imageUrl };
     localStorage.setItem('posts', JSON.stringify(posts));
     loadPosts();
